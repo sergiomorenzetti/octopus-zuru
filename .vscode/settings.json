@@ -1,0 +1,4 @@
+{
+  "chat.disableAIFeatures": false,
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
+}

@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
       },
+      "*.svg": {
+        as: "*.js",
+        loaders: [{ loader: "@svgr/webpack", options: { icon: true } }],
+      },
     },
   },
 };
