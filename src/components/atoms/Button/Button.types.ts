@@ -1,6 +1,10 @@
 import { IconName } from "../Icon/Icon";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost-light";
+export type ButtonVariant =
+  | "primary"
+  | "secondary"
+  | "ghost-light"
+  | "ghost-dark";
 
 type BaseButtonProps = {
   href?: string;
@@ -11,6 +15,8 @@ type BaseButtonProps = {
   ariaLabel?: string;
   ariaExpanded?: boolean;
   ariaControls?: string;
+  textSize?: string;
+  noPadding?: boolean;
 };
 
 type TextButtonProps = BaseButtonProps & {

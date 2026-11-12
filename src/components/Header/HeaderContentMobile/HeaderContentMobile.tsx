@@ -42,7 +42,7 @@ export function HeaderContentMobile() {
           onClick={closeMenu}
         >
           <Image
-            src={"/logo.svg"}
+            src={"/logo-red.svg"}
             alt={"Logo"}
             fill
             className="object-contain"

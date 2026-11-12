@@ -11,6 +11,8 @@ const BUTTON_VARIANTS_CLASS_MAP = {
     "bg-button-special-background text-button-special-text border-button-special-stroke hover:bg-button-special-background-hover hover:border-button-special-stroke-hover active:bg-button-special-background-pressed active:border-button-special-stroke-pressed",
   "ghost-light":
     "text-button-ghost-text-light hover:text-button-ghost-text-light-hover border-transparent",
+  "ghost-dark":
+    "text-button-ghost-text-dark hover:text-button-ghost-text-dark-hover border-transparent",
 } as const satisfies Record<ButtonVariant, string>;
 
 const DISABLED_BUTTON_VARIANTS_CLASS_MAP: Record<ButtonVariant, string> = {
@@ -19,10 +21,11 @@ const DISABLED_BUTTON_VARIANTS_CLASS_MAP: Record<ButtonVariant, string> = {
   secondary:
     "bg-button-special-background-disabled text-button-special-text-disabled border-button-special-stroke-disabled",
   "ghost-light": "text-button-ghost-text-light-disabled border-transparent",
+  "ghost-dark": "text-button-ghost-text-dark-disabled border-transparent",
 } as const satisfies Record<ButtonVariant, string>;
 
 const BASE_BUTTON_CLASSES =
-  "text-[16px] font-medium inline-flex items-center justify-center border rounded-[28px] outline-focus-stroke focus-visible:outline-[2px] focus-visible:outline-offset-[2px] transition-colors duration-200 ease-in-out" as const;
+  "font-medium inline-flex items-center justify-center border rounded-[28px] outline-focus-stroke focus-visible:outline-[2px] focus-visible:outline-offset-[2px] transition-colors duration-200 ease-in-out" as const;
 
 const ICON_ONLY_GHOST_CLASSES =
   "hover:bg-button-ghost-background-hover active:bg-button-ghost-background-pressed" as const;
@@ -39,9 +42,12 @@ export function Button({
   ariaLabel,
   ariaExpanded,
   ariaControls,
+  textSize = "text-[16px]",
+  noPadding = false,
 }: ButtonProps) {
   const buttonClasses = clsx(
-    label ? "px-[16px] py-[7px]" : "p-[7px]",
+    !noPadding && (label ? "px-[16px] py-[7px]" : "p-[7px]"),
+    textSize,
     BASE_BUTTON_CLASSES,
     disabled
       ? ["cursor-not-allowed", DISABLED_BUTTON_VARIANTS_CLASS_MAP[variant]]

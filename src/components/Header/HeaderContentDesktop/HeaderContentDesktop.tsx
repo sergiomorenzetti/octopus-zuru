@@ -12,8 +12,8 @@ export function HeaderContentDesktop() {
         aria-label="Homepage"
       >
         <Image
-          src={"/logo-large.svg"}
-          alt={"Logo large"}
+          src={"/logo-large-red.svg"}
+          alt={"Header logo"}
           fill
           className="object-contain"
           priority

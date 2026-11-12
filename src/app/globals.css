@@ -6,8 +6,16 @@
 }
 
 @theme inline {
+  --font-sans: var(--font-satoshi);
+
+  --breakpoint-tablet: 810px;
+  --breakpoint-desktop: 1200px;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-white-primary: #FFFFFF;
+
+  /* Buttons */
   --color-button-primary-background: #DE2027;
   --color-button-primary-text: #FFFFFF;
   --color-button-primary-stroke: #C2151B;
@@ -35,13 +43,15 @@
   --color-button-ghost-text-light-disabled: #B9B9B9;
   --color-button-ghost-background-hover: #0000000A;
   --color-button-ghost-background-pressed: #00000014;
+  
+  --color-button-ghost-text-dark: #FFFFFF;
+  --color-button-ghost-text-dark-hover: #FFFFFF;
+  --color-button-ghost-text-dark-disabled: #FFFFFF4D;
 
   --color-focus-stroke: #2069E859;
 
-  --font-sans: var(--font-satoshi);
-
-  --breakpoint-tablet: 810px;
-  --breakpoint-desktop: 1200px;
+  /* Footer */
+  --color-footer-background: #DE2027;
 }
 
 body {
@@ -50,5 +60,5 @@ body {
 }
 
 @utility container-layout {
-   @apply mx-auto w-full px-[16px] tablet:px-[32px] desktop:px-[48px] desktop:max-w-[1344px];
+   @apply mx-auto w-full px-[16px] tablet:px-[32px] desktop:px-[48px] desktop:max-w-[1440px];
 }
