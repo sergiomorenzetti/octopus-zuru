@@ -14,6 +14,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-white-primary: #FFFFFF;
+  --color-accent: #DE2027;
+  --color-secondary: #171717;
+  
+  --color-card-background-primary: #F9F9F9;
 
   /* Buttons */
   --color-button-primary-background: #DE2027;

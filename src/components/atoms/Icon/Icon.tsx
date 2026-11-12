@@ -16,7 +16,6 @@ export function Icon({ name, size = 24, className, ariaLabel }: IconProps) {
       width={size}
       height={size}
       className={className}
-      aria-label={ariaLabel}
       {...(ariaLabel
         ? { role: "img", "aria-label": ariaLabel }
         : { "aria-hidden": true, focusable: false })}

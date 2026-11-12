@@ -1,3 +1,11 @@
+import { BestSellersCarousel } from "@/components/BestSellersCarousel/BestSellersCarousel";
+import { Hero } from "@/components/Hero/Hero";
+
 export default function Home() {
-  return <>Homepage</>;
+  return (
+    <>
+      <Hero />
+      <BestSellersCarousel />
+    </>
+  );
 }
