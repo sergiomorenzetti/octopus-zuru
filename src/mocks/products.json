@@ -1,0 +1,29 @@
+[
+  {
+    "id": "air-fryer-5-7",
+    "slug": "octopus-air-fryer-5-7-l",
+    "name": "Octopus Air Fryer 5.7 L",
+    "category": "kitchen",
+    "shortDescription": "A 5.7 L air fryer that cooks meals quickly and evenly, with 2200W and dual heaters",
+    "image": "/Frame 112-2.png",
+    "bestSeller": true
+  },
+  {
+    "id": "indoor-camera",
+    "slug": "octopus-indoor-camera",
+    "name": "Octopus Indoor Camera",
+    "category": "home-security",
+    "shortDescription": "A 2K indoor camera that pans to cover the whole room and tracks movement as it happens",
+    "image": "/Frame 112-4.png",
+    "bestSeller": true
+  },
+  {
+    "id": "ionic-hair-dryer",
+    "slug": "octopus-ionic-hair-dryer",
+    "name": "Octopus Ionic Hair Dryer",
+    "category": "hair-care",
+    "shortDescription": "A powerful hair dryer with a 110,000 RPM motor for fast and efficient drying",
+    "image": "/Frame 112-7.png",
+    "bestSeller": true
+  }
+]
