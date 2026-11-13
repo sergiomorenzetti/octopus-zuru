@@ -43,9 +43,9 @@ export default function Home() {
         buttonLabel="Learn more"
         href={ROUTES.placeholder.route}
         image={{
-          mobile: "/Category=Hair Care, Breakpoint=_ 810px.png",
-          tablet: "/Category=Hair Care, Breakpoint=1199 - 810 px.png",
-          desktop: "/Breakpoint=Desktop.png",
+          mobile: "/hair-dryer-mobile.png",
+          tablet: "/hair-dryer-tablet.png",
+          desktop: "/hair-dryer-desktop.png",
         }}
         imageAlt="Woman drying her hair with the Octopus Ionic Hair Dryer"
       />

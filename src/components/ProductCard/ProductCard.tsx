@@ -84,6 +84,7 @@ export function ProductCard({
           variant="primary"
           href={href}
           className="mt-[16px]"
+          ariaLabel={buttonLabel}
         />
       </div>
 

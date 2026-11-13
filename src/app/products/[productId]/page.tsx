@@ -24,6 +24,9 @@ export async function generateMetadata({
         },
       ],
     },
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ?? "https://octopus-zuru.vercel.app",
+    ),
   };
 }
 

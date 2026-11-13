@@ -16,9 +16,9 @@
     "shortDescription": "A portable blender that blends straight into a cup you can take with you",
     "image": "/Frame 112-1.png",
     "featureImage": {
-      "mobile": "/Category=Hair Care, Breakpoint=_ 810px.png",
-      "tablet": "/Category=Kitchen, Breakpoint=1199 - 810 px.png",
-      "desktop": "/Category=Kitchen, Breakpoint=≥ 1200 px.png"
+      "mobile": "/blender-mobile.png",
+      "tablet": "/blender-tablet.png",
+      "desktop": "/blender-desktop.png"
     },
     "bestSeller": false
   },
@@ -75,9 +75,9 @@
     "shortDescription": "A 2K video doorbell that lets you answer from your phone",
     "image": "/Frame 112-5.png",
     "featureImage": {
-      "mobile": "/Category=Home Security, Breakpoint=_810px.png",
-      "tablet": "/Category=Home Security, Breakpoint=1199 - 810 px.png",
-      "desktop": "/Category=Home Security, Breakpoint=≥ 1200 px.png"
+      "mobile": "/doorbell-mobile.png",
+      "tablet": "/doorbell-tablet.png",
+      "desktop": "/doorbell-desktop.png"
     },
     "bestSeller": false
   },
