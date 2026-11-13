@@ -31,7 +31,7 @@ Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Headless UI, Embl
 
 ## Architecture and component approach
 
-- **Atomic-style structure.** Small, reusable pieces live in `components/atoms` (`Button`, `Icon`, `ArtDirectedImage`). Larger sections (header, footer, `Banner` etc.) compose them.
+- **Atomic-style structure.** Small, reusable pieces live in `components/atoms` (such as `Button` or `Icon`). Larger sections (header, footer, `Banner` etc.) compose them.
 - **Variants over duplication.** Components such as `Button` and `Banner` expose a `variant` prop. Class names live in typed maps (`as const satisfies Record<Variant, string>`), so a missing variant is a compile error, and Tailwind still sees complete class strings.
 
 ## Design notes and discrepancies
