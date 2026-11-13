@@ -55,7 +55,7 @@ Due to time constraints, I did not make everything data-driven: only the product
 
 ## What I would do with more time
 
-- Build the product detail page (PDP).
+- Build the product detail page.
 - Drive the whole homepage, and pages in general, from JSON data.
 - Align the `ProductCard` component with the Figma design system. Due to time constraints, I stopped at the solution proposed by the AI.
 - Expand the design tokens and atomic components, and align the existing components with the Figma design system.
