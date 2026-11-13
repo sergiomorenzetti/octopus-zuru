@@ -44,9 +44,10 @@ Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Headless UI, Embl
 
 I did not complete everything requested. The main gaps:
 
-- The product detail page is a placeholder that renders the slug only.
+- The product detail page, that is just a placeholder that renders the slug only.
 - The all-categories component on the homepage.
 - Meaningful tests.
+- ...
 
 ## Trade-offs
 
