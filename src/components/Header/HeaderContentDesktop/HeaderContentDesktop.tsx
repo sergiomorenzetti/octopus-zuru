@@ -7,7 +7,7 @@ export function HeaderContentDesktop() {
   return (
     <div className=" max-tablet:hidden flex flex-row items-center justify-between">
       <Link
-        href={ROUTES.homepage}
+        href={ROUTES.homepage.route}
         className="relative h-[40px] w-[108px] outline-focus-stroke focus-visible:outline-[2px] focus-visible:outline-offset-[2px] rounded-[28px]"
         aria-label="Homepage"
       >

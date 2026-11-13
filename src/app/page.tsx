@@ -4,6 +4,23 @@ import { BestSellersCarousel } from "@/components/BestSellersCarousel/BestSeller
 import { CategorySection } from "@/components/CategorySection/CategorySection";
 import { Hero } from "@/components/Hero/Hero";
 import { getProductsByCategory } from "@/lib/products";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: ROUTES.homepage.metadata.title,
+  description: ROUTES.homepage.metadata.description,
+  openGraph: {
+    title: ROUTES.homepage.metadata.title,
+    description: ROUTES.homepage.metadata.description,
+    images: [
+      {
+        url: "/logo.png",
+        width: 216,
+        height: 6,
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
@@ -21,9 +38,9 @@ export default function Home() {
         title="Octopus Ionic Hair Dryer"
         description="Dry your hair faster and with less frizz with this powerful ionic hair dryer"
         buttonLabel="Learn more"
-        href={ROUTES.placeholder}
+        href={ROUTES.placeholder.route}
         image={{
-          mobile: "/Category=Hair Care, Breakpoint=_ 810 px.png",
+          mobile: "/Category=Hair Care, Breakpoint=_ 810px.png",
           tablet: "/Category=Hair Care, Breakpoint=1199 - 810 px.png",
           desktop: "/Breakpoint=Desktop.png",
         }}
@@ -46,7 +63,7 @@ export default function Home() {
       <Banner
         title="Find us at The Warehouse"
         buttonLabel="Find your nearest store"
-        href={ROUTES.placeholder}
+        href={ROUTES.placeholder.route}
         image={{
           mobile: "/765697dbce7e5894140bd537cf5629451271cb53.png",
           tablet: "/Breakpoint=Tablet.png",

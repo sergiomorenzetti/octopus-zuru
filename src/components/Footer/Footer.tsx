@@ -10,17 +10,17 @@ const FOOTER_CATEGORIES: FooterCategoryLinksProps[] = [
   {
     title: "Our Products",
     links: [
-      { label: "Kitchen", href: ROUTES.placeholder },
-      { label: "Home Security", href: ROUTES.placeholder },
-      { label: "Hair Care", href: ROUTES.placeholder },
-      { label: "Accessories", href: ROUTES.placeholder },
+      { label: "Kitchen", href: ROUTES.placeholder.route },
+      { label: "Home Security", href: ROUTES.placeholder.route },
+      { label: "Hair Care", href: ROUTES.placeholder.route },
+      { label: "Accessories", href: ROUTES.placeholder.route },
     ],
   },
   {
     title: "Learn",
     links: [
-      { label: "Where to buy", href: ROUTES.placeholder },
-      { label: "Contact us", href: ROUTES.placeholder },
+      { label: "Where to buy", href: ROUTES.placeholder.route },
+      { label: "Contact us", href: ROUTES.placeholder.route },
     ],
   },
 ] as const;
@@ -55,7 +55,7 @@ export function Footer() {
           <Button
             variant="ghost-dark"
             label="Policies & Terms"
-            href={ROUTES.placeholder}
+            href={ROUTES.placeholder.route}
             textSize="text-[14px]"
             className="max-tablet:w-fit"
           />

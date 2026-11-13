@@ -82,7 +82,7 @@ export function CategorySection({
             description={featured.shortDescription}
             imageSrc={featured.image}
             featureImage={featured.featureImage}
-            href={ROUTES.product(featured.slug)}
+            href={ROUTES.product(featured.slug).route}
             buttonLabel="Learn more"
             variant={CARD_VARIANTS_MAP[layout].featured}
             className={FEATURED_CARD_CLASS_MAP[layout]}
@@ -94,7 +94,7 @@ export function CategorySection({
             name={product.name}
             description={product.shortDescription}
             imageSrc={product.image}
-            href={ROUTES.product(product.slug)}
+            href={ROUTES.product(product.slug).route}
             buttonLabel="Learn more"
             variant={CARD_VARIANTS_MAP[layout].other}
           />

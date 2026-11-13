@@ -1,6 +1,33 @@
-type ProductPageProps = PageProps<"/products/[productId]">;
+import { Metadata } from "next";
+import { ROUTES } from "@/app/routes";
 
-export default async function Page({ params }: ProductPageProps) {
+type PageProps = {
+  params: Promise<{ productId: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { productId } = await params;
+
+  return {
+    title: ROUTES.product(productId).metadata.title,
+    description: ROUTES.product(productId).metadata.description,
+    openGraph: {
+      title: ROUTES.product(productId).metadata.title,
+      description: ROUTES.product(productId).metadata.description,
+      images: [
+        {
+          url: "/logo.png",
+          width: 216,
+          height: 6,
+        },
+      ],
+    },
+  };
+}
+
+export default async function Page({ params }: PageProps) {
   const { productId } = await params;
 
   return (

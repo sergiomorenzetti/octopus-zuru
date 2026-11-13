@@ -1,4 +1,3 @@
-import { ROUTES } from "@/app/routes";
 import { Button } from "@/components/atoms/Button/Button";
 import Image from "next/image";
 

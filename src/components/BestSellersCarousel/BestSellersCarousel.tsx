@@ -21,7 +21,7 @@ export function BestSellersCarousel() {
             description={product.shortDescription}
             buttonLabel="Learn more"
             imageSrc={product.image}
-            href={ROUTES.product(product.slug)}
+            href={ROUTES.product(product.slug).route}
           />
         ))}
       />

@@ -36,7 +36,7 @@ export function HeaderContentMobile() {
     <div className="tablet:hidden flex flex-col">
       <div className="flex flex-row items-center justify-between">
         <Link
-          href={ROUTES.homepage}
+          href={ROUTES.homepage.route}
           className="relative h-[43px] w-[43px] outline-focus-stroke focus-visible:outline-[2px] focus-visible:outline-offset-[2px] rounded-[28px]"
           aria-label="Homepage logo"
           onClick={closeMenu}
