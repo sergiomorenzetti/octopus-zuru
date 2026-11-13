@@ -61,7 +61,7 @@ export default function Home() {
         products={getProductsByCategory("accessories")}
       />
       <Banner
-        title="Find us at The Warehouse"
+        title="Find us at"
         buttonLabel="Find your nearest store"
         href={ROUTES.placeholder.route}
         image={{
@@ -69,8 +69,14 @@ export default function Home() {
           tablet: "/Breakpoint=Tablet.png",
           desktop: "/49bd8e22e90232affb0c405a7b5a405e4a6d8c5e.png",
         }}
+        logo={{
+          src: "/logo-large-white.svg",
+          alt: "Octopus logo",
+          width: 216,
+          height: 64,
+        }}
         imageAlt="Octopus kettle, blender and air fryer on a red background"
-        theme="dark"
+        variant="dark"
       />
     </>
   );

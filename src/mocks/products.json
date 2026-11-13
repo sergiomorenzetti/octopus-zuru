@@ -75,7 +75,7 @@
     "shortDescription": "A 2K video doorbell that lets you answer from your phone",
     "image": "/Frame 112-5.png",
     "featureImage": {
-      "mobile": "/Category=Home Security, Breakpoint=_ 810 px.png",
+      "mobile": "/Category=Home Security, Breakpoint=_810px.png",
       "tablet": "/Category=Home Security, Breakpoint=1199 - 810 px.png",
       "desktop": "/Category=Home Security, Breakpoint=≥ 1200 px.png"
     },

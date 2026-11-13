@@ -30,7 +30,7 @@ export type ProductCardProps = {
   className?: string;
 };
 
-const CARD_VARIANT_CLASS_MAP = {
+const CARD_VARIANTSCLASS_MAP = {
   "feature-left":
     "relative items-center text-center tablet:justify-center tablet:items-start tablet:text-left",
   "feature-top": "relative items-center text-center",
@@ -40,7 +40,7 @@ const CARD_VARIANT_CLASS_MAP = {
     "items-center text-center tablet:flex-col-reverse tablet:items-stretch tablet:text-left",
 } as const satisfies Record<ProductCardVariant, string>;
 
-const TEXT_VARIANT_CLASS_MAP = {
+const TEXT_VARIANTSCLASS_MAP = {
   "feature-left": "tablet:max-w-1/2 tablet:items-start",
   "feature-top": "",
   stack: "",
@@ -48,7 +48,7 @@ const TEXT_VARIANT_CLASS_MAP = {
   "media-top": "tablet:items-start",
 } as const satisfies Record<ProductCardVariant, string>;
 
-const IMAGE_VARIANT_CLASS_MAP = {
+const IMAGE_VARIANTSCLASS_MAP = {
   "feature-left": "absolute inset-0",
   "feature-top": "absolute inset-0",
   stack: "relative w-full aspect-square",
@@ -73,7 +73,7 @@ export function ProductCard({
     <article
       className={clsx(
         "flex flex-col overflow-hidden rounded-[28px] bg-card-background-primary",
-        CARD_VARIANT_CLASS_MAP[variant],
+        CARD_VARIANTSCLASS_MAP[variant],
         className,
       )}
     >
@@ -81,7 +81,7 @@ export function ProductCard({
       <div
         className={clsx(
           "relative z-10 flex flex-col items-center gap-y-[8px] p-[24px] tablet:p-[32px]",
-          TEXT_VARIANT_CLASS_MAP[variant],
+          TEXT_VARIANTSCLASS_MAP[variant],
         )}
       >
         <h3 className="font-bold text-[24px] tablet:text-[28px]">{name}</h3>
@@ -96,7 +96,7 @@ export function ProductCard({
         />
       </div>
 
-      <div className={IMAGE_VARIANT_CLASS_MAP[variant]}>
+      <div className={IMAGE_VARIANTSCLASS_MAP[variant]}>
         {isFeature(variant) && featureImage ? (
           <ArtDirectedImage image={featureImage} alt={name} />
         ) : (
