@@ -4,13 +4,6 @@ import { ArtDirectedImage } from "@/components/atoms/ArtDirectedImage/ArtDirecte
 import { Button } from "@/components/atoms/Button/Button";
 import type { ResponsiveImage } from "@/lib/products";
 
-/**
- * - feature-left: image as background, text on the left (mobile: text on top, centered)
- * - feature-top: image as background, text on top, centered
- * - stack: text on top, centered, image below
- * - split: text on the left, image on the right (mobile: stack)
- * - media-top: image on top, text below aligned left (mobile: stack)
- */
 export type ProductCardVariant =
   | "feature-left"
   | "feature-top"
@@ -22,7 +15,6 @@ export type ProductCardProps = {
   name: string;
   description: string;
   imageSrc: string;
-  /** Feature variants only: replaces imageSrc with a different image per breakpoint */
   featureImage?: ResponsiveImage;
   href: string;
   buttonLabel: string;
@@ -30,7 +22,7 @@ export type ProductCardProps = {
   className?: string;
 };
 
-const CARD_VARIANTSCLASS_MAP = {
+const CARD_VARIANTS_CLASS_MAP = {
   "feature-left":
     "relative items-center text-center tablet:justify-center tablet:items-start tablet:text-left",
   "feature-top": "relative items-center text-center",
@@ -40,7 +32,7 @@ const CARD_VARIANTSCLASS_MAP = {
     "items-center text-center tablet:flex-col-reverse tablet:items-stretch tablet:text-left",
 } as const satisfies Record<ProductCardVariant, string>;
 
-const TEXT_VARIANTSCLASS_MAP = {
+const TEXT_VARIANTS_CLASS_MAP = {
   "feature-left": "tablet:max-w-1/2 tablet:items-start",
   "feature-top": "",
   stack: "",
@@ -48,7 +40,7 @@ const TEXT_VARIANTSCLASS_MAP = {
   "media-top": "tablet:items-start",
 } as const satisfies Record<ProductCardVariant, string>;
 
-const IMAGE_VARIANTSCLASS_MAP = {
+const IMAGE_VARIANTS_CLASS_MAP = {
   "feature-left": "absolute inset-0",
   "feature-top": "absolute inset-0",
   stack: "relative w-full aspect-square",
@@ -73,15 +65,14 @@ export function ProductCard({
     <article
       className={clsx(
         "flex flex-col overflow-hidden rounded-[28px] bg-card-background-primary",
-        CARD_VARIANTSCLASS_MAP[variant],
+        CARD_VARIANTS_CLASS_MAP[variant],
         className,
       )}
     >
-      {/* relative + z-10 keeps the texts above the background image of the feature variants */}
       <div
         className={clsx(
           "relative z-10 flex flex-col items-center gap-y-[8px] p-[24px] tablet:p-[32px]",
-          TEXT_VARIANTSCLASS_MAP[variant],
+          TEXT_VARIANTS_CLASS_MAP[variant],
         )}
       >
         <h3 className="font-bold text-[24px] tablet:text-[28px]">{name}</h3>
@@ -96,7 +87,7 @@ export function ProductCard({
         />
       </div>
 
-      <div className={IMAGE_VARIANTSCLASS_MAP[variant]}>
+      <div className={IMAGE_VARIANTS_CLASS_MAP[variant]}>
         {isFeature(variant) && featureImage ? (
           <ArtDirectedImage image={featureImage} alt={name} />
         ) : (

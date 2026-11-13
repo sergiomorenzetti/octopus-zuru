@@ -10,7 +10,7 @@ export type HeadingProps = {
   variant?: HeadingVariant;
 };
 
-const TITLE_VARIANTSCLASS_MAP = {
+const TITLE_VARIANTS_CLASS_MAP = {
   primary: "text-[40px] tablet:text-[48px] desktop:text-[60px]",
   secondary: "text-[32px] tablet:text-[44px]",
 } as const satisfies Record<HeadingVariant, string>;
@@ -28,7 +28,7 @@ export function Heading({
 }: HeadingProps) {
   return (
     <div className="flex flex-col items-center">
-      <h2 className={clsx("font-bold", TITLE_VARIANTSCLASS_MAP[variant])}>
+      <h2 className={clsx("font-bold", TITLE_VARIANTS_CLASS_MAP[variant])}>
         {title}
       </h2>
       <p

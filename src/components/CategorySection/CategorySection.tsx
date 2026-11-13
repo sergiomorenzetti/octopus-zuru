@@ -7,12 +7,6 @@ import {
 } from "@/components/ProductCard/ProductCard";
 import type { Product } from "@/lib/products";
 
-/**
- * - featured-top: large card on a full row, other cards below (Kitchen)
- * - featured-side: large card on the left spanning two rows, other cards stacked on the right (Home Security)
- * - grid: equal cards in a row (Accessories)
- * On mobile every layout becomes a single column.
- */
 export type CategorySectionLayout = "featured-top" | "featured-side" | "grid";
 
 type CategorySectionProps = {
@@ -20,7 +14,6 @@ type CategorySectionProps = {
   description: string;
   buttonLabel: string;
   layout: CategorySectionLayout;
-  /** In the "featured" layouts, the first product with a featureImage is the large card */
   products: Product[];
 };
 
@@ -30,7 +23,6 @@ const GRID_LAYOUT_CLASS_MAP = {
   grid: "tablet:grid-cols-3",
 } as const satisfies Record<CategorySectionLayout, string>;
 
-// Ratios follow the feature images exported from Figma (mobile 804x1072, tablet 1620x648, desktop 3200x1106)
 const FEATURED_CARD_CLASS_MAP = {
   "featured-top":
     "tablet:col-span-2 aspect-[804/1072] tablet:aspect-[1620/648] desktop:aspect-[3200/1106]",
