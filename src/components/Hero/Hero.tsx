@@ -6,7 +6,7 @@ export function Hero() {
       <div className="mt-[104px] tablet:mt-[180px]">
         <Heading
           title="Octupos Hair dryer"
-          description="Hero Description"
+          description="A powerful ionic hair dryer with a 110,000 RPM motor for fast drying and less frizz"
           buttonLabel="Learn more"
           variant="primary"
         />

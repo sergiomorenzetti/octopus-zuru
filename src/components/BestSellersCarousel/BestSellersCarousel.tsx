@@ -1,6 +1,7 @@
 import { CATEGORY_LABELS, getBestSellers } from "@/lib/products";
 import { Carousel } from "../Carousel/Carousel";
 import { CardCarousel } from "./CardCarousel/CardCarousel";
+import { ROUTES } from "@/app/routes";
 
 export function BestSellersCarousel() {
   const products = getBestSellers();
@@ -20,6 +21,7 @@ export function BestSellersCarousel() {
             description={product.shortDescription}
             buttonLabel="Learn more"
             imageSrc={product.image}
+            href={ROUTES.product(product.slug)}
           />
         ))}
       />

@@ -8,6 +8,7 @@ export type CardCarouselProps = {
   description: string;
   buttonLabel: string;
   imageSrc: string;
+  href: string;
 };
 
 export function CardCarousel({
@@ -16,21 +17,22 @@ export function CardCarousel({
   description,
   buttonLabel,
   imageSrc,
+  href,
 }: CardCarouselProps) {
   return (
     <div className="flex flex-col tablet:flex-row w-[320px] h-[512px] tablet:w-[746px] tablet:h-[413px] desktop:w-[1048px] desktop:h-[589px] overflow-hidden rounded-[28px] bg-card-background-primary">
       <div className="flex flex-col justify-center items-start gap-y-[8px] pt-[32px] px-[24px] tablet:w-1/2 tablet:p-[32px] desktop:p-[48px]">
-        <h5 className="text-accent font-[470] text-[18px]">{category}</h5>
+        <h5 className="text-text-accent font-[470] text-[18px]">{category}</h5>
         <h4 className="font-bold text-[24px] desktop:text-[32px] tablet:text-[28px]">
           {name}
         </h4>
-        <p className="font-[470] text-[18px] tablet:text-[20px] text-secondary">
+        <p className="font-[470] text-[18px] tablet:text-[20px] text-text-secondary">
           {description}
         </p>
         <Button
           label={buttonLabel}
           variant="primary"
-          href={ROUTES.placeholder}
+          href={href}
           className="mt-[16px]"
         />
       </div>

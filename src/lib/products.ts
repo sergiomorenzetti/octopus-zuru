@@ -6,6 +6,13 @@ export type ProductCategory =
   | "hair-care"
   | "accessories";
 
+/** A different image for each breakpoint (art direction) */
+export type ResponsiveImage = {
+  mobile: string;
+  tablet: string;
+  desktop: string;
+};
+
 export type Product = {
   id: string;
   slug: string;
@@ -13,6 +20,8 @@ export type Product = {
   category: ProductCategory;
   shortDescription: string;
   image: string;
+  /** When set, the product is the large card of its category section, with these images */
+  featureImage?: ResponsiveImage;
   bestSeller: boolean;
   colours?: string[];
   specs?: { title: string; items: string[] }[];

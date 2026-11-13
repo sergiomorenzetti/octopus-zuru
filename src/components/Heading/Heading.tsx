@@ -33,7 +33,7 @@ export function Heading({
       </h2>
       <p
         className={clsx(
-          "font-[470] text-[18px] tablet:text-[20px] desktop:text-[24px]",
+          "font-[470] text-[18px] tablet:text-[20px] desktop:text-[24px] text-text-secondary",
           DESCRIPTION_SPACING_CLASS_MAP[variant],
         )}
       >

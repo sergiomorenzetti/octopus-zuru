@@ -27,7 +27,7 @@ const FOOTER_CATEGORIES: FooterCategoryLinksProps[] = [
 
 export function Footer() {
   return (
-    <footer className="mt-auto text-white-primary bg-footer-background pb-[24px] pt-[48px] desktop:pt-[60px]">
+    <footer className="mt-auto text-text-white-primary bg-footer-background pb-[24px] pt-[48px] desktop:pt-[60px]">
       <div className="container-layout flex flex-col">
         <div className="flex flex-col tablet:flex-row tablet:justify-between">
           <div className="relative h-[100px] w-[100px]">
